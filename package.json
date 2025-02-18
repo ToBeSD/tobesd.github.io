@@ -7,8 +7,8 @@
   "license": "0BSD",
   "starter-name": "gatsby-starter-minimal-blog",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "gatsby build --prefix-paths",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
@@ -31,6 +31,7 @@
     "@types/react-dom": "^18.3.5",
     "ajv": "^8.17.1",
     "cross-env": "^7.0.3",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.7.3"
   }
 }
